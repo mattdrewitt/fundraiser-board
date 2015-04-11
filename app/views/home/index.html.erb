@@ -1,14 +1,19 @@
-<h1>Boards</h1>
+<h1>Existing Boards</h1>
 <ul>
-  <% Board.all.each do |b| %>
-    <h3><%= link_to b.title, board_path(b) %></h3>
+  <% if Board.all.present? %>
+    <% Board.all.each do |b| %>
+      <h3><%= link_to b.title, board_path(b) %></h3>
+    <% end %>
+  <% else %>
+    <p>No boards created yet! Create one below!
   <% end %>
 </ul>
 
+<h2>Create New Board</h2>
 <%= form_for Board.new do |f| %>
   <p>
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: "Ex. London" %>
   </p>
   <%= f.submit %>
 <% end %>

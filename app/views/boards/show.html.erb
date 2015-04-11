@@ -1,3 +1,4 @@
+<h1><%= @board.title %></h1>
 <%= link_to "< Back", root_path %>
 <table class="output" data-board-id="<%= @board.id %>">
   <% @board.tiles.ordered.in_groups_of(10).each do |group| %>
