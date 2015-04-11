@@ -1,0 +1,14 @@
+<h1>Boards</h1>
+<ul>
+  <% Board.all.each do |b| %>
+    <h3><%= link_to b.title, board_path(b) %></h3>
+  <% end %>
+</ul>
+
+<%= form_for Board.new do |f| %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <%= f.submit %>
+<% end %>

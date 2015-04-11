@@ -1,0 +1,17 @@
+<%= link_to "< Back", root_path %>
+<table class="output" data-board-id="<%= @board.id %>">
+  <% @board.tiles.ordered.in_groups_of(10).each do |group| %>
+    <tr>
+    <% group.each do |t| %>
+      <td class="option <%= t.person.present? ? "selected" : "" %>" data-number="<%= t.order %>">
+        <div><%= t.title %></div>
+        <div class="name"><%= t.person %></div>
+      </td>
+    <% end %>
+  <% end %>
+</table>
+<label>Name:</label>
+<input type="text" name="name"/>
+<a href="javascript:void(0);" class="run">
+  Run
+</a>
