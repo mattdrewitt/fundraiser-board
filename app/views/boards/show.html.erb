@@ -1,6 +1,9 @@
-<h1><%= @board.title %></h1>
+<div class="header"> 
+  <h1>-- <%= @board.title %> --</h1>
+  <h2>Guess how long it will take Tara to finish the Boston Marathon!</h2>
+</div>
 <%= link_to "< Back", root_path %>
-<table class="output" data-board-id="<%= @board.id %>">
+<table class="output" data-board-id="<%= @board.id %>" valign="middle">
   <% @board.tiles.ordered.in_groups_of(10).each do |group| %>
     <tr>
     <% group.each do |t| %>
@@ -11,8 +14,11 @@
     <% end %>
   <% end %>
 </table>
-<label>Name:</label>
-<input type="text" name="name"/>
-<a href="javascript:void(0);" class="run">
-  Run
-</a>
+<div class="input">
+  <label>Name:</label>
+  <input type="text" name="name"/>
+  <br>
+  <a href="javascript:void(0);" class="run">
+    Run
+  </a>
+</div>

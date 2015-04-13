@@ -1,4 +1,11 @@
+<br>
+<h1 style="text-align: center;">Boston Maraton Board</h1>
+<br>
+<div class="homepage">
+<br>
 <h1>Existing Boards</h1>
+<br>
+
 <ul>
   <% if Board.all.present? %>
     <% Board.all.each do |b| %>
@@ -8,12 +15,15 @@
     <p>No boards created yet! Create one below!
   <% end %>
 </ul>
-
+<hr>
+<br>
 <h2>Create New Board</h2>
+<br>
 <%= form_for Board.new do |f| %>
   <p>
-    <%= f.label :title %><br />
+    <%= f.label :title %>&nbsp;
     <%= f.text_field :title, placeholder: "Ex. London" %>
   </p>
   <%= f.submit %>
 <% end %>
+</div>

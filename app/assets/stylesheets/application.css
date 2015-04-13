@@ -13,16 +13,176 @@
  *= require_tree .
  *= require_self
  */
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed, 
+ figure, figcaption, footer, header, hgroup, 
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, 
+ footer, header, hgroup, menu, nav, section {
+  display: block;
+ }
+ body {
+  line-height: 1;
+ }
+ ol, ul {
+  list-style: none;
+ }
+ blockquote, q {
+  quotes: none;
+ }
+ blockquote:before, blockquote:after,
+ q:before, q:after {
+  content: '';
+  content: none;
+ }
+
+
+ table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 10px 0;
+  box-sizing: border-box;
+  table-layout: fixed;
+  }
+
+ body {
+  font-family: sans-serif;
+  background: url(http://subtlepatterns.com/patterns/swirl_pattern.png);
+ }
+
+
+.header {
+  text-align: center;
+  width: 100%;
+  background: #100f60;
+  margin: 0 0 20px 0;
+  padding: 20px 0;
+  color: white;
+}
+
+ h1 {
+  font-size: 2em;
+ }
+
+ h2 {
+  font-size: 1.75em;
+ }
+
+ /* unvisited link */
+ a:link {
+  background-color: #edcc15;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+ }
+
+ /* visited link */
+ a:visited {
+  background-color: #edcc15;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+ }
+
+ /* mouse over link */
+ a:hover {
+  background-color: #edcc15;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+ }
+
+ /* selected link */
+ a:active {
+  background-color: #edcc15;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+ }
 
 .output {
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
+  background: #fff;
+  margin-bottom: 10px;
+  vertical-align: middle;
 }
 .output td {
-  border: 1px solid #000;
+  border: 1px solid #100f60;
+  border-collapse: collapse;
+  height: 62px;
+  text-align: center;
+  padding: 5px;
 }
 .option.selected {
-  color: red;
+  background-color: #9ad3d3;
 }
 .option.flare {
-  background: blue;
+  background: #ff9775;
 }
+
+.selected .name {
+  margin-top: 5px;
+  display: inline-block;
+  padding: 5px;
+  background: #100f60;
+  color: white;
+  width: 90%;
+  white-space: pre-wrap;      /* CSS3 */   
+  white-space: -moz-pre-wrap; /* Firefox */    
+  white-space: -pre-wrap;     /* Opera <7 */   
+  white-space: -o-pre-wrap;   /* Opera 7 */   
+  word-wrap: break-word;
+}
+.input {
+  padding-top: 25px;
+  width: 45%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #100f60;
+  background-color: #9ad3d3;
+}
+
+label {
+  font-weight: 800;
+  font-size: 20pt;
+  vertical-align: middle;
+}
+
+input {
+  height: 40px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.homepage {
+  padding: 20px;
+  margin-top: 20px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background: white;
+  border: 1px solid #100f60;
+}
+
