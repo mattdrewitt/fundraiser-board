@@ -20,6 +20,7 @@ class Board < ActiveRecord::Base
       options << Tile.new(title: "#{start_time[:hour]} hrs & #{start_time[:min]} mins - #{end_time[:hour]} hrs & #{end_time[:min]} mins", order: i)
       start_time = end_time
     end
+    @time = {hour: 3, min: 0} # Reset the timer back to initial
     options << Tile.new(title: 'Under 3 hrs', order: 98)
     options << Tile.new(title: 'Over 6 hrs and 14 mins', order: 99)
     options << Tile.new(title: 'DNF', order: 100)
